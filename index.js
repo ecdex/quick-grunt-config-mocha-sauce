@@ -60,9 +60,9 @@ function loadTestTasks(grunt, settings) {
     // mocha throws an error if it is given a glob that doesn't match at least
     // one file, so pre-filter all of these possible glob patterns to exclude ones
     // that don't produce files
-    globs = _.reject(globs, function(fileGlob) {
+    globs = _.reject(globs, function (fileGlob) {
       var files = glob.sync(fileGlob);
-      return files.length == 0;
+      return files.length === 0;
     });
 
     mochacli[key] = { options: { filesRaw: globs } };
