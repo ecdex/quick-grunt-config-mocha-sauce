@@ -95,3 +95,5 @@ individual test files we look for in those directories (default to "spec").
 there is an "integration" entry in `settings.testTypes` and that the
 files and Mocha tests for that test type are the ones to be used by
 the `integrate-sauce` Grunt task we register.
+* a configuration mechanism for people who don't want to use
+`grunt-environmental`.
