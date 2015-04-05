@@ -32,9 +32,11 @@ function loadTestTasks(grunt, settings) {
         [
           "environmental:test:" + target,
           "env:local",
+          "integration-test-setup:test-" + target,
           "express:test-" + target,
           "mochacli:integration",
-          "express:test-" + target + ":stop"
+          "express:test-" + target + ":stop",
+          "integration-test-teardown:test-" + target
         ]);
   });
 
@@ -90,9 +92,11 @@ function loadTestTasks(grunt, settings) {
           [
             "environmental:test:" + environmentName,
             "env:local",
+            "integration-test-setup:test-" + target,
             "express:test-" + target,
             "mochacli:integration",
-            "express:test-" + target + ":stop"
+            "express:test-" + target + ":stop",
+            "integration-test-teardown:test" + target
           ]
       );
     });
@@ -139,6 +143,11 @@ function loadTestTasks(grunt, settings) {
         process.env.SAUCE_CONFIG_JSON = target;
       }
   );
+
+
+  grunt.registerTask("integration-test-setup", "override in your local Gruntfile to perform setup steps", function () {});
+  grunt.registerTask("integration-test-teardown", "override in your local Gruntfile to perform setup steps", function () {});
+
 
   return {
     mochacli: mochacli,
