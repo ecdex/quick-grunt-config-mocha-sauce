@@ -56,7 +56,11 @@ function loadTestTasks(grunt, settings) {
         .concat([
           path.join(__dirname, "lib", key, "**", "*_helpers.js"),
           path.join("test", key, "**", "*_helpers.js"),
-          path.join("test", key, "**", "*_spec.js")
+          path.join("test", key, "**",
+              (process.env.MOCHA_FILE && process.env.MOCHA_FILE !== "") ?
+                  process.env.MOCHA_FILE :
+                  "*_spec.js"
+          )
         ]);
 
     // mocha throws an error if it is given a glob that doesn't match at least
@@ -68,6 +72,9 @@ function loadTestTasks(grunt, settings) {
     });
 
     mochacli[key] = { options: { filesRaw: globs } };
+    if (process.env.MOCHA_GREP && process.env.MOCHA_GREP !== "") {
+      mochacli[key].options.grep = process.env.MOCHA_GREP;
+    }
   });
 
 
