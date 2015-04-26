@@ -1,6 +1,6 @@
 {
   "name"        : "quick-grunt-config-mocha-sauce",
-  "version"     : "0.0.4",
+  "version"     : "0.0.5",
   "description" : "Module containing a generator for configurations for Grunt tasks for running tests using mocha, selenium-webdriver, and Sauce Labs.",
   "author"      : "Glen E. Ivey",
   "homepage": "https://github.com/ecdex/quick-grunt-config-mocha-sauce",
@@ -14,6 +14,7 @@
     "node": "~0.10.0"
   },
   "dependencies": {
+    "crypto": "^0.0.3",
     "environmental": "^1.2.0",
     "glob": "^4.4.1",
     "grunt": "^0.4.5",
