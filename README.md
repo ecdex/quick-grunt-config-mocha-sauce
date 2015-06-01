@@ -9,6 +9,7 @@ Sauce Labs via the sauce NPM.
 [![NPM version](http://badge.fury.io/js/quick-grunt-config-mocha-sauce.png)](https://npmjs.org/package/quick-grunt-config-mocha-sauce "View this project on NPM")
 [![Dependency Status](https://david-dm.org/ecdex/quick-grunt-config-mocha-sauce.png?theme=shields.io)](https://david-dm.org/ecdex/quick-grunt-config-mocha-sauce)
 [![Development Dependency Status](https://david-dm.org/ecdex/quick-grunt-config-mocha-sauce/dev-status.png?theme=shields.io)](https://david-dm.org/ecdex/quick-grunt-config-mocha-sauce#info=devDependencies)
+[![Peer Dependency Status](https://david-dm.org/ecdex/quick-grunt-config-mocha-sauce/peer-status.png?theme=shields.io)](https://david-dm.org/ecdex/quick-grunt-config-mocha-sauce#info=peerDependencies)
 
 To use, list this package along with whichever of the following
 
